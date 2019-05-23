@@ -3,6 +3,8 @@ syntax on
 " syntax enable
 :let mapleader = ","
 
+set clipboard=unnamed
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -36,10 +38,6 @@ nnoremap <C-t>     :tabnew<CR>
 inoremap <C-Left> <Esc>:tabprevious<CR>i
 inoremap <C-Right>   <Esc>:tabnext<CR>i
 inoremap <C-t>     <Esc>:tabnew<CR>
-
-" sane text paste
-nnoremap <C-p> :set invpaste paste?<CR>
-set pastetoggle=<C-p>
 
 " Wrapped line navigation
 nnoremap k gk
@@ -133,3 +131,4 @@ endif
 au BufRead /tmp/mutt* normal :g/^> -- $/,/^$/-1d^M/^$^M^L
 
 nnoremap <leader>p Oimport pdb; pdb.set_trace()<Esc>
+vnoremap <leader>y "+y<Esc> 
