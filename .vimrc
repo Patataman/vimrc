@@ -70,7 +70,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'dhruvasagar/vim-table-mode'
-
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 
@@ -131,4 +131,6 @@ endif
 au BufRead /tmp/mutt* normal :g/^> -- $/,/^$/-1d^M/^$^M^L
 
 nnoremap <leader>p Oimport pdb; pdb.set_trace()<Esc>
-vnoremap <leader>y "+y<Esc> 
+vnoremap <leader>y "+y<Esc>
+nnoremap <leader>std istd::cout << << std::endl;<Esc>
+inoremap <leader>std std::cout << << std::endl;<Esc>i
