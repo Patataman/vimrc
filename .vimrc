@@ -132,5 +132,5 @@ au BufRead /tmp/mutt* normal :g/^> -- $/,/^$/-1d^M/^$^M^L
 
 nnoremap <leader>p Oimport pdb; pdb.set_trace()<Esc>
 vnoremap <leader>y "+y<Esc>
-nnoremap <leader>std istd::cout << << std::endl;<Esc>
-inoremap <leader>std std::cout << << std::endl;<Esc>i
+inoremap <leader>std std::cout << << std::endl;<Esc>
+nnoremap <leader>pretty :execute '%!python -m json.tool'<CR><Esc>
