@@ -1,5 +1,6 @@
 " general stuff
 syntax on
+set noswapfile
 " syntax enable
 :let mapleader = ","
 
@@ -133,4 +134,4 @@ au BufRead /tmp/mutt* normal :g/^> -- $/,/^$/-1d^M/^$^M^L
 nnoremap <leader>p Oimport pdb; pdb.set_trace()<Esc>
 vnoremap <leader>y "+y<Esc>
 inoremap <leader>std std::cout << << std::endl;<Esc>
-nnoremap <leader>pretty :execute '%!python -m json.tool'<CR><Esc>
+nnoremap <leader>jpretty :execute '%!python -m json.tool'<CR><Esc>
